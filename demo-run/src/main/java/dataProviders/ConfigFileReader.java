@@ -112,8 +112,8 @@ public class ConfigFileReader {
         return true;
     }
 
-    public String getTestDataResourcePath() {
-        String testDataResourcePath = properties.getProperty("testDataResourcePath");
+    public String getAccessKey() {
+        String testDataResourcePath = properties.getProperty("access_key");
         if (testDataResourcePath != null)
             return testDataResourcePath;
         else
@@ -121,8 +121,8 @@ public class ConfigFileReader {
                     "Test Data Resource Path not specified in the Configuration.properties file for the Key:testDataResourcePath");
     }
 
-    public String getSiteAdminUrl() {
-        String url = properties.getProperty("siteAdminUrl");
+    public String getUsername() {
+        String url = properties.getProperty("username");
         if (url != null)
             return url;
         else

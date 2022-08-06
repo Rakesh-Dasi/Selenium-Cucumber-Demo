@@ -3,20 +3,20 @@ package cucumber;
 import java.net.MalformedURLException;
 
 import managers.PageObjectManager;
-import managers.WebDriverMangerUtils;
+import managers.WebDriverFactory;
 
 public class TestContext {
-	private final WebDriverMangerUtils webDriverManager;
+	private final WebDriverFactory webDriverManager;
 	private final PageObjectManager pageObjectManager;
 	public ScenarioContext scenarioContext;
 
 	public TestContext() throws MalformedURLException {
-		webDriverManager = new WebDriverMangerUtils();
+		webDriverManager = new WebDriverFactory();
 		pageObjectManager = new PageObjectManager(webDriverManager.getDriver());
 		scenarioContext = new ScenarioContext();
 	}
 
-	public WebDriverMangerUtils getWebDriverManager() {
+	public WebDriverFactory getWebDriverManager() {
 		return webDriverManager;
 	}
 

@@ -39,6 +39,7 @@ public class HomePage extends HomePageLocators {
     }
 
     public void SelectCategory(String category){
+        Wait.shortSleep();
         Assert.assertTrue(Wait.IsElementDisplayed(Categories(category)));
         Wait.waitForElementVisibleAndClick(Categories(category));
     }
